@@ -1,0 +1,388 @@
+// color variants
+@import 'themes-vars.module.scss';
+
+// third-party
+@import '~react-perfect-scrollbar/dist/css/styles.css';
+
+// ==============================|| LIGHT BOX ||============================== //
+.fullscreen .react-images__blanket {
+    z-index: 1200;
+}
+
+// ==============================|| APEXCHART ||============================== //
+
+.apexcharts-legend-series .apexcharts-legend-marker {
+    margin-right: 8px;
+}
+
+// ==============================|| PERFECT SCROLLBAR ||============================== //
+
+.scrollbar-container {
+    .ps__rail-y {
+        &:hover > .ps__thumb-y,
+        &:focus > .ps__thumb-y,
+        &.ps--clicking .ps__thumb-y {
+            background-color: $grey500;
+            width: 5px;
+        }
+    }
+    .ps__thumb-y {
+        background-color: $grey500;
+        border-radius: 6px;
+        width: 5px;
+        right: 0;
+    }
+}
+
+.scrollbar-container.ps,
+.scrollbar-container > .ps {
+    &.ps--active-y > .ps__rail-y {
+        width: 5px;
+        background-color: transparent !important;
+        z-index: 999;
+        &:hover,
+        &.ps--clicking {
+            width: 5px;
+            background-color: transparent;
+        }
+    }
+    &.ps--scrolling-y > .ps__rail-y,
+    &.ps--scrolling-x > .ps__rail-x {
+        opacity: 0.4;
+        background-color: transparent;
+    }
+}
+
+// ==============================|| ANIMATION KEYFRAMES ||============================== //
+
+@keyframes wings {
+    50% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    53%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translateZ(0);
+    }
+    40%,
+    43% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -5px, 0);
+    }
+    70% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, -7px, 0);
+    }
+    80% {
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translateZ(0);
+    }
+    90% {
+        transform: translate3d(0, -2px, 0);
+    }
+}
+
+@keyframes slideY {
+    0%,
+    50%,
+    100% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes slideX {
+    0%,
+    50%,
+    100% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+.toast-alert {
+    border-radius: 10px;
+    background: #333;
+    color: #fff;
+    padding: 25px;
+    background-color: black;
+    font-size: larger;
+}
+
+.form-label-required {
+    .MuiFormLabel-asterisk {
+        color: red
+    }
+}
+
+.doc-dropzone {
+    border: 2px dashed #673AB7;//#06122B;
+    border-radius: 20px;
+    padding: 20px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.doc-dropzone:hover {
+    border: 2px solid #673AB7;
+}
+
+.dropzone-button-grid {
+    margin: 10px;
+    display: flex;
+}
+
+.dropzone-file-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    
+    .dropzone-file-name {
+        display: flex;
+        margin: 0px 10px;
+        align-items: center;
+    }
+}
+
+.pdf_page {
+    max-height: 150px;
+}
+
+.document_pdfView_container .react-pdf__Document {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.document_pdfView_container .react-pdf__Page {
+    max-width: calc(100% - 2em);
+    box-shadow: 0 30px 40px 0 rgb(16 36 94 / 20%);
+    margin: 1em;
+}
+
+.document_pdfView_container .react-pdf__Page canvas {
+    max-width: 100%;
+    height: auto !important;
+    max-height: auto !important;
+}
+
+.document_pdfView_container .react-pdf__message {
+    padding: 20px;
+    color: white;
+}
+  
+
+.week-table-cell {
+    border: 1px solid rgba(224, 224, 224, 1);
+}
+
+.week-header-padding {
+    padding: 6px;
+}
+
+.week-checkBox {
+    margin: 0;
+} 
+
+.fc-theme-standard {
+    .fc-scrollgrid {
+      border: 0;
+    }
+  }
+
+.fc-col-header,
+.fc-scrollgrid-sync-table {
+border-collapse: separate !important;
+border-spacing: 10px !important;
+}
+
+  .fc-theme-standard {
+    td,
+    th {
+      border: 0;
+    }
+  }
+
+  .fc-scrollgrid-sync-inner {
+    text-align: center;
+    cursor: pointer;
+
+    .fc-col-header-cell-cushion {
+      color: #8c8c8c;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .fc-daygrid-day-frame {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0px 4px 12px rgba(6, 18, 43, 0.08);
+    border-radius: 12px;
+    padding: 8px;
+
+    &:hover {
+      background: #fff;
+    }
+
+    &::after {
+      content: initial;
+    }
+
+    &::before {
+      content: initial;
+    }
+
+    .fc-daygrid-day-top {
+      // flex-direction: initial;
+      justify-content: center;
+
+      .fc-daygrid-day-number {
+        color: black;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    .fc-daygrid-day-events {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      justify-content: center;
+
+      &::after {
+        content: initial;
+      }
+
+      &::before {
+        content: initial;
+      }
+
+      .fc-daygrid-event-harness {
+        display: flex;
+        align-items: center;
+
+        &::after {
+          content: initial;
+        }
+
+        &::before {
+          content: initial;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 32px;
+       }
+
+       .fc-h-event {
+        background-color: transparent;
+        border: transparent;
+
+        .fc-event-main {
+          color: #673AB7;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          display: flex;
+          justify-content: center;
+          gap: 5px;
+
+        }
+      }
+      .fc-daygrid-day-bottom {
+        display: none;
+      }
+    }
+    .fc-daygrid-day-bg {
+        display: none;
+      }
+    }
+}
+
+.fc-bg-event {
+    border-radius: 10px;
+    opacity: 0.7 !important;
+}
+
+.entryDate {
+    padding: 10px;
+    margin: 10px;
+}
+
+.entry-add {
+    // width: 100%;
+    // background: #f3f3f8;
+    // padding: 10px;
+    // margin: 10px;
+    // display: flex;
+    // align-items: center;
+    // flex-direction: row;
+    columns: 2;
+    margin: 16px 16px 0px 16px;
+    column-gap: 0;
+    background-color: #f3f3f8;
+    padding: 20px 20px;
+}
+
+.each-entry {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+}
+
+.entry-button-div {
+    display: flex;
+    justify-content: left;
+    margin: 0px 16px 16px 16px;
+    padding: 10px;
+    background-color: #f3f3f8;
+}
+
+.company-stepper {
+    .Mui-active {
+        color: #673AB7;
+    }
+}
